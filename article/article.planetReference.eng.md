@@ -60,8 +60,8 @@ The dependencies property is an array containing the dependencies of the planet 
 You might find something like this:
 
 
-dependencies:
-    - git::/lingtalfi/CopyDir:1.0.0
+    dependencies:
+        - git::/lingtalfi/CopyDir:1.0.0
     
     
 In this case, the first dash simply indicates that what follows is an array entry.
