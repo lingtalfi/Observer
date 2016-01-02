@@ -32,6 +32,7 @@ How do I use a planet?
 ---------------------------
 
 Download it, download its dependencies, plug all of it into your application, done.
+But there is a better worklow: download all planets as once package, see the "download all planets" section below.
 
 
 
@@ -120,6 +121,50 @@ planets authors use it a lot (and by that I really mean a lot) for debugging.
  
 az does the same job, but also exit at the end, which helps you focusing on the debugging task (for instance
 if you are debugging something in the middle of an html page, you might find the az function very useful). 
+
+
+
+
+
+
+Download all the planets
+---------------------------
+2016-01-02
+
+
+It is said that in the universe, there will be a tool to download the planets and resolve its dependencies,
+but this tool is not there yet.
+Therefore in the meantime, the workflow I use when working with planets, and since planets have a lot of dependencies,
+is to download all the planets at once in your local machine, and then import (copy paste) those that you need in your projects.
+
+You can find snapshots of the universe's planets here: https://github.com/karayabin/universe-snapshot
+Download the most recent zip and you are good to go.
+
+
+Alternatively, if you are not a big fan of copy pasting dependencies as you need them, you can symlink the universe folder,
+and use the [Butineur autoloader](https://github.com/lingtalfi/BumbleBee/tree/master/Autoload) and have all the universe's classes ready
+in no time.
+
+A snippet like the one below should work just fine:
+
+```php
+ButineurAutoLoader::getInst()
+    ->addLocation(__DIR__ . "/modules")
+    ->addLocation("/path/to/local/universe")  
+    // ->addLocation(__DIR__ . "/myclasses") // we could use multiple directories if needed 
+    ->start();
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
