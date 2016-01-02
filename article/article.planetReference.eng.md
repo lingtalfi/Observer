@@ -135,6 +135,7 @@ Download all the planets
 
 It is said that in the universe, there will be a tool to download the planets and resolve its dependencies,
 but this tool is not there yet.
+
 Therefore in the meantime, the workflow I use when working with planets, and since planets have a lot of dependencies,
 is to download all the planets at once in your local machine, and then import (copy paste) those that you need in your projects.
 
