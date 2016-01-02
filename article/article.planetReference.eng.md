@@ -31,8 +31,9 @@ There is nothing bigger than multi-verse.
 How do I use a planet?
 ---------------------------
 
-Download it, download its dependencies, plug all of it into your application, done.
-But there is a better worklow: download all planets as once package, see the "download all planets" section below.
+Download it, download its dependencies, plug all of it into your application, done.<br>
+But, since 2015-01-02, there is a better worklow: download all planets as one package, 
+see the ["download all planets" section](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#download-all-the-planets) below.
 
 
 
