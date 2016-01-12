@@ -80,7 +80,7 @@ Install BSR-0 packages
 
 - Unzip the downloaded tarball
 - Create the planets directory in your application if it doesn't exist yet, and put the unzipped planet in it, with its correct name (remove github's "-master" suffix if there is one).
-- Now follow the steps of the [standard application workflow](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#standardapplicationworkflow).
+- Now follow the steps of the [standard application workflow](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#standard-application-workflow).
 - If there is a www folder inside the planet, map it to your application web directory (the web server's root dir of your application)
 - That's it
 
