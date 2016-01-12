@@ -68,7 +68,7 @@ How you install a planet depends on its type.
 The default type is a [BSR-0](https://github.com/lingtalfi/BumbleBee/blob/master/Autoload/convention.bsr0.eng.md) compliant php code, since most planets are of this type.
 If the type is not the default type, then it should be defined in the package-info.yml file, under the type property.
 
-To install a BSR-0 package, please refer to the [instructions below](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#installbsr0packages)
+To install a BSR-0 package, please refer to the [instructions below](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#install-bsr-0-packages)
 
 
 
@@ -78,11 +78,11 @@ To install a BSR-0 package, please refer to the [instructions below](https://git
 Install BSR-0 packages
 -------------------------
 
-Unzip the downloaded tarball.
-Create the planets directory in your application if it doesn't exist yet, and put the unzipped planet in it, 
-with its correct name (remove github's "-master" suffix if there is one).
-Now follow the steps of the [standard application workflow](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#standardapplicationworkflow).
-That's it
+- Unzip the downloaded tarball
+- Create the planets directory in your application if it doesn't exist yet, and put the unzipped planet in it, with its correct name (remove github's "-master" suffix if there is one).
+- Now follow the steps of the [standard application workflow](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#standardapplicationworkflow).
+- If there is a www folder inside the planet, map it to your application web directory (the web server's root dir of your application)
+- That's it
 
  
 
