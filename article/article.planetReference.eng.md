@@ -31,9 +31,9 @@ There is nothing bigger than THE multi-verse.
 How do I use a planet?
 ---------------------------
 
-- Download it
-- Download the dependencies
-- Install it
+- [Download it](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#download-it)
+- [Download the dependencies](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#download-the-dependencies)
+- [Install it](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#install-it)
 
 
 
