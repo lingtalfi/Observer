@@ -22,142 +22,130 @@ So what's a planet?
 
 A planet is a php package.
 
-By extension, an universe is an ensemble of somehow related packages.
-By extension, the multi-verse is the ensemble of all known universes.
-There is nothing bigger than multi-verse.
+A universe contains planets.
+THE multi-verse contains universes.
+There is nothing bigger than THE multi-verse.
 
 
 
 How do I use a planet?
 ---------------------------
 
-Download it, download its dependencies, plug all of it into your application, done.<br>
-But, since 2015-01-02, there is a better worklow: download all planets as one package, 
-see the ["download all planets" section](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#download-all-the-planets) below.
+- Download it
+- Download the dependencies
+- Install it
+
+
+
 
 
 
 ### Download it
 
-
-Download the git repository.
-As for now, it seems that every planet is represented by a git repository, so that should be a no brainer.
+Download the git repository of the planet of your choice.
 
 
-### Download its dependencies
-
-It seems that planet authors use the convention of writing their dependencies to other planets in a file 
-called package-info.yml.
-
-Look for such a file in the planet you want to use.
-If you don't find the package-info.yml file, you can assume that the planet has no dependency.
-
-If there is one, open it and look for the dependencies property.
-
-Note: the file format is [babyYaml](https://github.com/lingtalfi/Dreamer/blob/master/ArrayConfig/BabyYaml/notation.babyYaml.eng.md) so you shouldn't have problem 
-to understand it without knowing anything about babyYaml.
+### Download the dependencies
 
 
-The dependencies property is an array containing the dependencies of the planet to other planets.
-You might find something like this:
+Planets might have dependencies.
+Dependencies should/must be installed to, recursively (that's the painful part with the current system, unless you [download all planets at once](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#related)).
+Dependencies, if any, are listed in the package-info.yml file of the planet, or alternatively in the README.md document 
+of the planet on github.com.
 
+As for now, there is no tool that automatically install all planets dependencies for you;
+but don't despair, I heard rumors that a tool called Explorer will sooner or later do just that.
 
-    dependencies:
-        - git::/lingtalfi/CopyDir:1.0.0
+When you install a dependency manually, beware of the version number, which by default uses [semver](http://semver.org/) notation, unless otherwise
+specified in the package-info.yml file (versionNamingSystem property).
+Each version of a planet is accessible via the release tab (github.com).
     
     
-In this case, the first dash simply indicates that what follows is an array entry.
-The git::/ prefix can be interpreted as an alias for https://github.com, basically.
-The dependency's url in this case is: **https://github.com/lingtalfi/CopyDir**.
 
-Then the 1.0.0 number at the end, after the colon symbol, indicates the version that the 
-planet author used.
-On github, if you go to the releases tab (https://github.com/lingtalfi/CopyDir/releases) of the github repository, you will find all available versions.
+### Install it
 
-In this example we want to download the version named 1.0.0 of the lingtalfi/CopyDir github repository. 
-As for now on github, you can download a release using the zip version or the tar.gz version.
+How you install a planet depends on its type.
+The default type is a [BSR-0](https://github.com/lingtalfi/BumbleBee/blob/master/Autoload/convention.bsr0.eng.md) compliant php code, since most planets are of this type.
+If the type is not the default type, then it should be defined in the package-info.yml file, under the type property.
 
-
-
-Repeat the process until all dependencies have been resolved.
-
-Rumors say that a tool is coming, which will resolve dependencies automatically, so you might want 
-to check this article again in some future.
+To install a BSR-0 package, please refer to the [instructions below](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#installbsr0packages)
 
 
 
 
 
 
+Install BSR-0 packages
+-------------------------
 
-### Plug all of it into your application
+Unzip the downloaded tarball.
+Create the planets directory in your application if it doesn't exist yet, and put the unzipped planet in it, 
+with its correct name (remove github's "-master" suffix if there is one).
+Now follow the steps of the [standard application workflow](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#standardapplicationworkflow).
+That's it
 
-
-To plug a planet into your application, you have to be aware of what you are doing.
-Planet code doesn't have to be php code, and if it's php code, it doesn't have to be object oriented.
-However, if you the planet you want to import is php object oriented code, chances are that the code
-uses [BSR-0](https://github.com/lingtalfi/BumbleBee/blob/master/Autoload/convention.bsr0.eng.md) naming convention.
-
-
-
-
-If your planet is BSR-0 compatible, then you simply need to copy the planet files in your application,
-in the directory where the autoloader of your application will find them.
  
-It could be a directory named planets, or vendor(s), or modules for instance.
-
-If you don't have such a directory yet you need to create one.
-There are different methods to do so.
-
-The one that seems to be used the most in the universe is the 
-[portable autoloader technique](https://github.com/lingtalfi/TheScientist/blob/master/convention.portableAutoloader.eng.md).
-With this technique, you include a [bigbang script](https://github.com/lingtalfi/TheScientist/blob/master/bigbang/bigbang.php)
-in your app, and then any planets of the universe you can plug into your app.  
-
-
-In planets documentation, you'll often see references to the "a" and "az" functions.
-Those come from the bigbang script. 
-The a function is basically an alias for var_dump, since
-planets authors use it a lot (and by that I really mean a lot) for debugging.
- 
-az does the same job, but also exit at the end, which helps you focusing on the debugging task (for instance
-if you are debugging something in the middle of an html page, you might find the az function very useful). 
 
 
 
+BSR-0 Workflows
+--------------------
 
+If you are interested in, here are differents workflows.
 
+### THE FASTEST BSR-0 workflow that I found for quick testing is the following:
 
-Download all the planets
----------------------------
-2016-01-02
+- [Download all planets at once](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#related) 
+- Implement the [portable autoloader technique](https://github.com/lingtalfi/TheScientist/blob/master/convention.portableAutoloader.eng.md).
+- Create a snippet with your IDE, so that when you type "bb" it writes 'require_once "bigbang.php"'.
 
+I use it all the time for quick testing: just open any php file, and type bb, done (planets of your local machine's universe 
+are available, plus you have a and az functions right away).
+  
+  
 
-It is said that in the universe, there will be a tool to download the planets and resolve its dependencies,
-but this tool is not there yet.
+### standard application workflow 
 
-Therefore in the meantime, the workflow I use when working with planets, and since planets have a lot of dependencies,
-is to download all the planets at once in your local machine, and then import (copy paste) those that you need in your projects.
+This is what I use for my applications:
 
-You can find snapshots of the universe's planets here: https://github.com/karayabin/universe-snapshot
-Download the most recent zip and you are good to go.
+- create the planets folder at the root of your application's directory
+- import the planets that you want, but at least the [BumbleBee planet](https://github.com/lingtalfi/BumbleBee)
+- open the init file of your application, and paste/adapt the following code in it: 
 
-
-Alternatively, if you are not a big fan of copy pasting dependencies as you need them, you can symlink the universe folder,
-and use the [Butineur autoloader](https://github.com/lingtalfi/BumbleBee/tree/master/Autoload) and have all the universe's classes ready
-in no time.
-
-A snippet like the one below should work just fine:
 
 ```php
-ButineurAutoLoader::getInst()
-    ->addLocation(__DIR__ . "/modules")
-    ->addLocation("/path/to/local/universe")  
-    // ->addLocation(__DIR__ . "/myclasses") // we could use multiple directories if needed 
+
+use BumbleBee\Autoload\ButineurAutoloader;
+
+
+//------------------------------------------------------------------------------/
+// INCLUDE FUNCTIONS AND AUTOLOADER CLASS
+//------------------------------------------------------------------------------/
+require_once __DIR__ . "/functions/az.php"; // 
+require_once __DIR__ . "/vendor/autoload.php"; // if you use composer
+require_once __DIR__ . '/planets/BumbleBee/Autoload/BeeAutoloader.php'; // you will need to download the BumbleBee planet 
+require_once __DIR__ . '/planets/BumbleBee/Autoload/ButineurAutoloader.php';
+
+//------------------------------------------------------------------------------/
+// INIT THE AUTOLOADER
+//------------------------------------------------------------------------------/
+ButineurAutoloader::getInst()
+    ->addLocation(__DIR__ . "/planets")
+    ->addLocation(__DIR__ . "/modules") // create your application BSR-0 modules (classes) and put them here
     ->start();
+
 ```
 
+- good job, you are done with the BSR-0 setup
 
+
+
+
+
+Related
+----------
+
+Download all planets at once using [lingtalfi's universe snapshots here](https://github.com/karayabin/universe-snapshot)
 
 
 
