@@ -121,7 +121,7 @@ use BumbleBee\Autoload\ButineurAutoloader;
 //------------------------------------------------------------------------------/
 // INCLUDE FUNCTIONS AND AUTOLOADER CLASS
 //------------------------------------------------------------------------------/
-require_once __DIR__ . "/functions/az.php"; // 
+require_once __DIR__ . "/functions/az.php"; // not required, but huge time saver, you can find them in https://github.com/lingtalfi/TheScientist/blob/master/_bb_autoload/autoload.php (in the "BONUS FUNCTIONS" section)
 require_once __DIR__ . "/vendor/autoload.php"; // if you use composer
 require_once __DIR__ . '/planets/BumbleBee/Autoload/BeeAutoloader.php'; // you will need to download the BumbleBee planet 
 require_once __DIR__ . '/planets/BumbleBee/Autoload/ButineurAutoloader.php';
