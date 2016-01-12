@@ -49,7 +49,7 @@ Download the git repository of the planet of your choice.
 
 
 Planets might have dependencies.
-Dependencies should/must be installed to, recursively (that's the painful part with the current system, unless you [download all planets at once](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#related)).
+Dependencies should/must be installed to, recursively (that's the painful part with the current system, unless you [download all planets at once](lingtalfi's universe snapshots here](https://github.com/karayabin/universe-snapshot)).
 Dependencies, if any, are listed in the package-info.yml file of the planet, or alternatively in the README.md document 
 of the planet on github.com.
 
@@ -93,9 +93,9 @@ BSR-0 Workflows
 
 If you are interested in, here are differents workflows.
 
-### THE FASTEST BSR-0 workflow that I found for quick testing is the following:
+### THE FASTEST BSR-0 workflow (that I found so far)
 
-- [Download all planets at once](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md#related) 
+- [Download all planets at once](lingtalfi's universe snapshots here](https://github.com/karayabin/universe-snapshot) 
 - Implement the [portable autoloader technique](https://github.com/lingtalfi/TheScientist/blob/master/convention.portableAutoloader.eng.md).
 - Create a snippet with your IDE, so that when you type "bb" it writes 'require_once "bigbang.php"'.
 
