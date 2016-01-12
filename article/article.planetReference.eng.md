@@ -95,7 +95,7 @@ If you are interested in, here are differents workflows.
 
 ### THE FASTEST BSR-0 workflow (that I found so far)
 
-- [Download all planets at once](lingtalfi's universe snapshots here](https://github.com/karayabin/universe-snapshot) 
+- [Download all planets at once](https://github.com/karayabin/universe-snapshot) 
 - Implement the [portable autoloader technique](https://github.com/lingtalfi/TheScientist/blob/master/convention.portableAutoloader.eng.md).
 - Create a snippet with your IDE, so that when you type "bb" it writes 'require_once "bigbang.php"'.
 
