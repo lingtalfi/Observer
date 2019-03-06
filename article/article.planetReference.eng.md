@@ -115,7 +115,7 @@ This is what I use for my applications:
 
 ```php
 
-use BumbleBee\Autoload\ButineurAutoloader;
+use Ling\BumbleBee\Autoload\ButineurAutoloader;
 
 
 //------------------------------------------------------------------------------/
